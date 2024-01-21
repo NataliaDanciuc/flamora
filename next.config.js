@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+// Next.js configuration
+const nextConfig = {
+    images: {
+      
+      domains: ['lh3.googleusercontent.com', 'cdn.dedeman.ro', 's13emagst.akamaized.net'],
+     
+    },
+  };
+  
+  module.exports = nextConfig;
