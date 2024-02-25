@@ -3,7 +3,7 @@
 const nextConfig = {
     images: {
       
-      domains: ['lh3.googleusercontent.com', 'cdn.dedeman.ro', 's13emagst.akamaized.net'],
+      domains: ['lh3.googleusercontent.com', 'cdn.dedeman.ro', 's13emagst.akamaized.net', 'www.curtainshop.com', 'curtainshop.com'],
      
     },
   };

@@ -1,14 +1,5 @@
 import { defineField } from "sanity";
 
-
-const supportType = [
-    {title: 'sina', value: 'sina'},
-    {title: 'galerie', value: 'galerie'}
-];
-const prindereType = [ 
-    {title: 'rejansa', value: 'rejansa'},
-    {title: 'inele', value: 'inele'}
-]
 const order = {
     name: 'order',
     title: 'Order',
@@ -77,7 +68,7 @@ const order = {
             title: 'Support Type',
             type: 'string',
             options: {
-                list: supportType
+                list: [{title: 'Sina', value: 'sina'}, {title: 'Galerie', value: 'galerie'}]
             },
             initialValue: 'sina'
         }),
@@ -86,11 +77,10 @@ const order = {
             title: 'Prindere Type',
             type: 'string',
             options: {
-                list: prindereType
+                list: [{title: 'Rejansa', value: 'rejansa'}, {title: 'Inele', value: 'inele'}]
             },
             initialValue: 'rejansa'
         }),
-
 
         
           

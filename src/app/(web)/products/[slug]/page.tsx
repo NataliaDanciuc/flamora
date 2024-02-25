@@ -5,15 +5,15 @@ import useSWR from "swr";
 import LoadingSpinner from "../../loading";
 import ShopPhotoGallery from "@/components/ShopPhotoGallery/ShopPhotoGallery";
 import BuyProductCta from "@/components/BuyProductCta/BuyProductCta";
-import { SetStateAction, useContext, useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-import stripe from "stripe";
+
 import { getStripe } from "@/libs/stripe";
-import product from "../../../../../schemas/product";
+
 import ProductReview from "@/components/ProductReview/ProductReview";
-import ProducReview from "@/components/ProductReview/ProductReview";
+
 
 
 
@@ -22,7 +22,7 @@ const ProductDetails = (props: { params: { slug: string } }) => {
     params: { slug },
   } = props;
 
-  const [totalPrice, setTotalPrice] = useState("");
+
   const [prindereType, setPrindereType] = useState('');
   const [ supportType, setSupportType] = useState('');
   const [height, setHeight]= useState(0);
@@ -40,9 +40,7 @@ const ProductDetails = (props: { params: { slug: string } }) => {
   if (!product) return <LoadingSpinner />;
 
   // Funcția de callback pentru actualizarea prețului
-  const handlePriceChange = (newPrice: string) => {
-    setTotalPrice(newPrice);
-  };
+  
   const calculateTotalPrice = () => {
     const laborCost = 15;
     const productType = product.type;
@@ -81,14 +79,10 @@ const ProductDetails = (props: { params: { slug: string } }) => {
     const formattedTotalPrice = totalPrice.toFixed(2);
     return formattedTotalPrice;
   };
-  const handleAddToCartClick = async () => {
+  const handleGoPayClick = async () => {
     
     const productType= product.type;
     const productSlug = product.slug.current;
-
-    // if (isNaN(totalPrice) || totalPrice <= 0) {
-    //   return toast.error("Please fill in all required fields with a valid total price");
-    // }
     
     // Check if any required fields are missing
     if ((productType === "accesorii" && !quantity) || !productSlug) {
@@ -186,7 +180,7 @@ const ProductDetails = (props: { params: { slug: string } }) => {
               setWidth={setWidth}
               quantity={quantity}
               setQuantity={setQuantity}
-              handleAddToCartClick={handleAddToCartClick}
+              handleGoPayClick={handleGoPayClick}
               supportType={supportType}
               setSupportType={setSupportType}
               prindereType={prindereType}

@@ -89,7 +89,7 @@ const UserDetails = (props: { params: { id: string } }) => {
 
   if (loadingUserData) return <LoadingSpinner />;
   if (!userData) throw new Error('Cannot fetch data');
-  if (!userData) throw new Error('Cannot fetch data');
+  if (!userOrders) throw new Error('Cannot fetch data');
 
   return (
     <div className='container mx-auto px-2 md:px-4 py10'>

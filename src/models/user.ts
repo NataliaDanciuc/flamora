@@ -4,7 +4,7 @@ export type User = {
     email: string,
     isAdmin: string,
     about: string | null,
-    image: string,
+    image: string ,
     _createdAt: string,
 
 }

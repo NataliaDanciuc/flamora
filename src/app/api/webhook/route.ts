@@ -26,51 +26,46 @@ export async function POST(req: Request, res: Response) {
         case checkout_session_completed:
             const session = event.data.object;
 
-            // Check if metadata is present
-            if (session.metadata) {
-                const {
-                    metadata: {
-                        user,
-                        product,
-                        totalPrice,
-                        discount,
-                        quantity,
-                        height,
-                        width,
-                        supportType,
-                        prindereType,
-                        unitPrice,
-                    },
-                } = session;
-
-                // create an order
-                await createOrder({
+            const {
+                metadata: {
                     user,
                     product,
-                    totalPrice: Number(totalPrice),
-                    discount: Number(discount),
-                    quantity: Number(quantity),
-                    height: Number(height),
-                    width: Number(width),
+                    totalPrice,
+                    discount,
+                    quantity,
+                    height,
+                    width,
                     supportType,
                     prindereType,
-                    unitPrice: Number(unitPrice)
-                });
+                    unitPrice,
+                },
+            } = session;
 
-                return NextResponse.json("Order successful", {
-                    status: 200,
-                    statusText: "Order successful",
-                });
-            } else {
-                console.log("Metadata is null or undefined");
-                // Handle the case where metadata is not present
-            }
+            // create an order
+            await createOrder({
+                user,
+                product,
+                totalPrice: Number(totalPrice),
+                discount: Number(discount),
+                quantity: Number(quantity),
+                height: Number(height),
+                width: Number(width),
+                supportType,
+                prindereType,
+                unitPrice: Number(unitPrice)
+            });
 
-        default:
-            console.log(`Unhandled event type ${event.type}`);
-    }
-    return NextResponse.json("Event received", {
-        status: 200,
-        statusText: "Event received",
-    });
+            return NextResponse.json("Order successful", {
+                status: 200,
+                statusText: "Order successful",
+            });
+        
+
+            default:
+                console.log(`Unhandled event type ${event.type}`);
+        }
+        return NextResponse.json("Event received", {
+            status: 200,
+            statusText: "Event received",
+        });
 }

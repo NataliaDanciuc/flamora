@@ -10,7 +10,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero1.jpg'
+              src='/images/img1.jpg'
               width={200}
               height={200}
             />
@@ -19,7 +19,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero1.jpg'
+              src='/images/img2.jpg'
               width={200}
               height={200}
             />
@@ -28,7 +28,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero2.jpg'
+              src='/images/img3.jpg'
               width={200}
               height={200}
             />
@@ -37,7 +37,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero3.jpg'
+              src='/images/img4.jpg'
               width={200}
               height={200}
             />
@@ -49,7 +49,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero1.jpg'
+              src='/images/img5.jpg'
               width={200}
               height={200}
             />
@@ -58,7 +58,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero2.jpg'
+              src='/images/img6.jpg'
               width={200}
               height={200}
             />
@@ -67,7 +67,7 @@ const Gallery = () => {
             <Image
               alt='gallery'
               className='img'
-              src='/images/hero3.jpg'
+              src='/images/img7.jpg'
               width={200}
               height={200}
             />

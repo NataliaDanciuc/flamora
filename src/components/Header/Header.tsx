@@ -3,7 +3,7 @@
 
 import React, { useContext } from 'react';
 import Link from 'next/link';
-import { FaShoppingCart, FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import ThemeContext from '@/context/themeContext';
 import { useSession } from 'next-auth/react';
@@ -19,7 +19,7 @@ const {data: session} = useSession();
 
   return (
     <header className='py-10 px-4 container mx-auto text-xl md:flex items-center justify-between'>
-      <div className='flex items-center w-full md:w-2/3'>
+      <div className='flex items-center w-full md:w-2/5'>
         <Link href="/" className='font-black text-tertiary-dark'>
           Flamora
         </Link>
@@ -62,8 +62,8 @@ const {data: session} = useSession();
         </ul>
       </div>
 
-      <ul className='flex items-center justify-between w-full md:w-1/3 mt-4'>
-        <li className='hover:-translate-y-2 duration-500 transition-all'>
+      <ul className='flex items-center justify-between w-full md:w-3/5 mt-4'>
+        <li className='hover:-translate-y-2 duration-500 transition-all '>
           <Link href='/'>Acasă</Link>
         </li>
         <li className='hover:-translate-y-2 duration-500 transition-all'>
@@ -73,7 +73,7 @@ const {data: session} = useSession();
           <Link href='/'>Contact</Link>
         </li>
         <li className='hover:-translate-y-2 duration-500 transition-all'>
-          <Link href='/cart'><FaShoppingCart/></Link>
+          <Link href='/blog'>Blog</Link>
         </li>
       </ul>
     </header>

@@ -20,22 +20,22 @@ const ClientComponent: FC<Props> = props => {
             <div className="flex justify-between mt-12">
                 <div className="flex gap-3 flex-col item-center justify-between">
                 <p className="text-xs lg:text-xl text-center">Perdele</p>
-                <CountUpNumber duration={3000} endValue={100}/>
+                <CountUpNumber duration={3000} endValue={60}/>
                 </div>
 
                 <div className="flex gap-3 flex-col item-center justify-between">
                 <p className="text-xs lg:text-xl text-center">Draperii</p>
-                <CountUpNumber duration={3000} endValue={100}/>
+                <CountUpNumber duration={3000} endValue={50}/>
                 </div>
 
                 <div className="flex gap-3 flex-col item-center justify-between">
                 <p className="text-xs lg:text-xl text-center">Accesorii</p>
-                <CountUpNumber duration={3000} endValue={250}/>
+                <CountUpNumber duration={3000} endValue={80}/>
                 </div>
             </div>
             </div>
 
-            {/* IMAGES */}
+            
         {section2}
 
   </section>

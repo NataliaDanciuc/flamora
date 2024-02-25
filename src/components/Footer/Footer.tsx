@@ -12,18 +12,18 @@ function Footer() {
             <h4 className="font-semibold text-[40px] py-6">Contact</h4>
             <div className="flex flex-wrap gap-16 items-center justify-between">
                 <div className="flex-1">
-                    <p>123 Road</p>
+                    <p>Strada Republicii nr. 35 Vișeu de Sus</p>
                     <div className="flex item-center py-4">
                         <BsFillSendFill/>
-                        <p className="ml-2">Danciuc Natalia</p>
+                        <p className="ml-2">Flamora</p>
                     </div>
                     <div className="flex item-center ">
                         <BsTelephoneOutbound/>
-                        <p className="ml-2">000-000-000</p>
+                        <p className="ml-2">0751234567</p>
                     </div>
                     <div className="flex item-center pt-4">
                         <BiMessageDetail/>
-                        <p className="ml-2">Danciuc Natalia</p>
+                        <p className="ml-2">flamora.ecommerce@gmail.com</p>
                     </div>
                 </div>
 

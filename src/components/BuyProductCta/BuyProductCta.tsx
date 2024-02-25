@@ -1,7 +1,7 @@
 "use client";
 import { Dispatch, FC, SetStateAction, useState } from "react";
 
-import { Product } from "@/models/product";
+
 
 
 type Props = {
@@ -19,7 +19,7 @@ type Props = {
   setWidth: Dispatch<SetStateAction<number>>;
   quantity: number;
   setQuantity: Dispatch<SetStateAction<number>>;
-  handleAddToCartClick: () => void;
+  handleGoPayClick: () => void;
 
   
  
@@ -42,7 +42,7 @@ const BuyProductCta: FC<Props> = (props) => {
     setWidth,
     quantity,
     setQuantity,
-    handleAddToCartClick
+    handleGoPayClick
     
    } = props;
   
@@ -53,14 +53,6 @@ const BuyProductCta: FC<Props> = (props) => {
  
 
   const discountPrice = price - (price / 100) * discount;
- 
-  
-
-  // const handleAddToCartClick = () => {
-  //   const totalPrice = calculateTotalPrice();
-    
-   
-  // };
  
 
   const calculateTotalPrice = () => {
@@ -188,7 +180,7 @@ const BuyProductCta: FC<Props> = (props) => {
         Prețul total: {calculateTotalPrice()} RON
       </p>
       <button 
-        onClick={handleAddToCartClick}
+        onClick={handleGoPayClick}
         
         className='btn-primary w-full mt-6 disabled:bg-gray-500 disabled:cursor-not-allowed' >
         Continua catre plata

@@ -7,18 +7,13 @@ import { getFeaturedProduct } from "@/libs/apis";
 
 const Home = async () => {
   const featuredProduct = await getFeaturedProduct ();
-  // console.log(featuredProduct);
-
- 
-
+  
   return (<> 
     <HeroSection/>
     <PageSearch/>
     <FeaturedProduct featuredProduct={featuredProduct}/>
     <Gallery/>
     <NewsLetter/>
-
-
   </>
   );
 } ;
